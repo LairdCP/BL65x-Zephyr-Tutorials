@@ -119,7 +119,7 @@ This tutorial will show you how to setup the Zephyr development environment, bui
 
      ```
      cd ~/zephyrproject/zephyr
-     west build -p auto -b nrf52_pca10040 samples/basic/blinky
+     west build -p auto -b bl652_dvk samples/basic/blinky
      ```
 
      
@@ -136,7 +136,7 @@ This tutorial will show you how to setup the Zephyr development environment, bui
 
      ```
      cd ~/zephyrproject/zephyr
-     west build -p auto -b nrf52840_pca10056 samples/basic/blinky
+     west build -p auto -b bl654_dvk samples/basic/blinky
      ```
 
      
