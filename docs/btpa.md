@@ -22,9 +22,14 @@ The OS used to run this tutorial is Ubuntu 18.04.
         # wget http://mirrors.kernel.org/ubuntu/pool/main/d/device-tree-compiler/device-tree-compiler_1.4.7-3ubuntu2_amd64.deb
         # sudo apt install ./device-tree-compiler_1.4.7-3ubuntu2_amd64.deb
         ```
-
+   
 
 2.  Patch the bluetooth sample app
+  - Add this line to the bl654_dvk_defconfig in the Zephyr source. In boards/arm/bl654_dvk/bl654_dvk_defconfig:
+
+    ```
+    CONFIG_FLASH_LOAD_OFFSET=0x1000
+    ```
 
   - The Zephyr source code contains a sample application that will advertise our BL654 and also scan for Ble devices. Modify the sample app in the zephyr source via a patch in order to generate some json content that will be sent to the /dev/ttyS2 device on the IG60.  Later, we will fetch this json in order to publish the device data in a Lambda.  
   
