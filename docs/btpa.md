@@ -77,7 +77,7 @@ The OS used to run this tutorial is Ubuntu 18.04.
 
 4. Package and upload the application
 
-  - Using the generated .hex file from the previous section, follow the [Generating Firmware Updates](https://documentation.lairdconnect.com/Builds/IG60-BL654-GREENGRASS/latest/Content/Topics/6%20-%20Software%20Reference/BL654%20Programming%20Guide/Generating%20Firmware%20Updates.html) guide in order to create a package that can be installed on the BL654 in the IG60.
+  - Using the generated .hex file from the previous section, follow the [Generating Firmware Updates](https://documentation.lairdconnect.com/Builds/IG60-BL654-GREENGRASS/latest/Content/Topics/6%20-%20Software%20Reference/BL654%20Programming%20Guide/Generating%20Firmware%20Updates.htm) guide in order to create a package that can be installed on the BL654 in the IG60.
 
   - Install the newly generated package on the IG60 using the [fwloader lambda](https://github.com/LairdCP/igsdk/blob/master/aws/lambdas/bluetooth5/fwloader/fwloader.py)
 
