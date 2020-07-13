@@ -4,6 +4,8 @@ This tutorial is based on the [Zephyr Getting Started Guide](https://docs.zephyr
 
 This tutorial will show you how to setup the Zephyr development environment, build the Blinky app and flash the app into the BL65x dev kit.
 
+If you prefer to watch the video tutorial, click [here](https://www.lairdconnect.com/resources/videos/getting-started-zephyr-bl652bl654).
+
 1.  Update the OS
 
    ```
@@ -13,7 +15,7 @@ This tutorial will show you how to setup the Zephyr development environment, bui
 
    
 
-2. Install Dependencies
+2. Install Dependencies and verify CMake version.
 
    ```
    sudo apt install --no-install-recommends git cmake ninja-build gperf \
@@ -23,6 +25,10 @@ This tutorial will show you how to setup the Zephyr development environment, bui
         
    cmake --version
    ```
+
+   
+
+   If CMake version is not  3.13.1 or later, please visit  [Zephyr Getting Started Guide](https://docs.zephyrproject.org/latest/getting_started/index.html) for steps on how to update CMake.
 
    
 
@@ -84,7 +90,7 @@ This tutorial will show you how to setup the Zephyr development environment, bui
 
      
 
-   - Install udev rules
+   - Install udev rules so we can flash the boards as a regular user
 
      ```
      sudo cp ~/zephyr-sdk-0.11.3/sysroots/x86_64-pokysdk-linux/usr/share/openocd/contrib/60-openocd.rules /etc/udev/rules.d
