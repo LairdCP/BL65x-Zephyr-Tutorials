@@ -4,7 +4,7 @@ This tutorial is based on the [Zephyr Getting Started Guide](https://docs.zephyr
 
 This tutorial will show you how to setup the Zephyr development environment, build the Blinky app and flash the app into the BL65x dev kit.
 
-If you prefer to watch the video tutorial, click [here](https://www.lairdconnect.com/resources/videos/getting-started-zephyr-bl652bl654).
+To watch video tutorial, click [here](https://www.lairdconnect.com/resources/videos/getting-started-zephyr-bl652bl654).
 
 1.  Update the OS
 
