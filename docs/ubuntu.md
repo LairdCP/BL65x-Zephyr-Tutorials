@@ -133,7 +133,8 @@ To watch video tutorial, click [here](https://www.lairdconnect.com/resources/vid
    - Build for BL653
 
      ```
-     Coming soon!
+     cd ~/zephyrproject/zephyr
+     west build -p auto -b bl654_dvk samples/basic/blinky
      ```
 
      
@@ -151,12 +152,13 @@ To watch video tutorial, click [here](https://www.lairdconnect.com/resources/vid
 
    - Connect Ubuntu PC to USB2 port of the dev kit
 
-   - Flash the build
+   - Erase and then flash the build
 
      ```
+     nrfjprog -e
      west flash
-     ```
-
+   ```
+     
      
 
 8. Verify LED1 is flashing
