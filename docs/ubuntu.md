@@ -134,7 +134,7 @@ To watch video tutorial, click [here](https://www.lairdconnect.com/resources/vid
 
      ```
      cd ~/zephyrproject/zephyr
-     west build -p auto -b bl654_dvk samples/basic/blinky
+     west build -p auto -b bl653_dvk samples/basic/blinky
      ```
 
      
@@ -157,8 +157,10 @@ To watch video tutorial, click [here](https://www.lairdconnect.com/resources/vid
      ```
      nrfjprog -e
      west flash
+     ```
    ```
      
      
+   ```
 
 8. Verify LED1 is flashing
