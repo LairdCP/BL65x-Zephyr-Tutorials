@@ -29,7 +29,7 @@ The goal of this tutorial is to give you a simple example that can get you start
       - Added code to handle an unacknowledged on/off message
       - Enabled relay function
 
-      It's recommend that you make a backup of the original main.c; so that you can diff it against the replacement main.c. This will allow you to easily see the changes that were done.
+      It's recommended that you make a backup of the original main.c; so that you can diff it against the replacement main.c. This will allow you to easily see the changes that were done.
 
    2. Open main.c with a text editor and confirm that the UUID is set for node 1
 
