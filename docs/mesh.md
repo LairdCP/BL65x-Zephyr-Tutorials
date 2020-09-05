@@ -18,7 +18,11 @@ The goal of this tutorial is to give you a simple example that can get you start
 
 2. Build the Mesh Sample app
 
-   1. Replace main.c from ../samples/bluetooth/mesh/src/main.c with this [main.c](../src/mesh/main.c)
+   1. Create a folder named "laird" in the ~/zephyrproject folder.
+
+   2. Copy  the mesh application folder from ~/zephyrproject/zephyr/samples/bluetooth/mesh  into the ~/zephyrproject/laird folder you just created. Since we'll be changing main.c, it's a good idea to create a separate application folder. This way, we always have a copy of the original.
+
+   3. Replace the main.c from ~/zephyrproject/laird/mesh/src/main.c with this [main.c](../src/mesh/main.c)
 
       This replacement main.c is basically the original main.c with the following modifications:
 
@@ -29,9 +33,9 @@ The goal of this tutorial is to give you a simple example that can get you start
       - Added code to handle an unacknowledged on/off message
       - Enabled relay function
 
-      It's recommended that you make a backup of the original main.c; so that you can diff it against the replacement main.c. This will allow you to easily see the changes that were done.
+      It's recommend that you diff the original main.c (i.e. the one in ~/zephyrproject/zephyr/samples/bluetooth/mesh/src) against the replacement main.c. This will allow you to easily see the changes that were done.
 
-   2. Open main.c with a text editor and confirm that the UUID is set for node 1
+   4. Open replacement main.c with a text editor and confirm that the UUID is set for node 1
 
       ```c
       static const uint8_t dev_uuid[16] = { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08,0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x01 }; //use for node 1
@@ -41,15 +45,15 @@ The goal of this tutorial is to give you a simple example that can get you start
 
       
 
-   3. Build and flash node 1
+   5. Build and flash node 1
 
       For this demo we will use the BL652 dev kit for node 1
 
       - To build for BL652
 
         ```
-        cd ~/zephyrproject/zephyr
-        west build -p auto -b bl652_dvk samples/bluetooth/mesh 
+        cd ~/zephyrproject/laird
+        west build -p auto -b bl652_dvk mesh 
         ```
 
       - To flash connect PC to USB2 port of dev kit
@@ -62,7 +66,7 @@ The goal of this tutorial is to give you a simple example that can get you start
         ```
         
 
-   4. Build and flash for node 2
+   6. Build and flash for node 2
 
       For this demo will use the BL653 dev kit for node 2
 
@@ -79,8 +83,8 @@ The goal of this tutorial is to give you a simple example that can get you start
       - To build for BL653
 
         ```
-        cd ~/zephyrproject/zephyr
-        west build -p auto -b bl653_dvk samples/bluetooth/mesh 
+        cd ~/zephyrproject/laird
+        west build -p auto -b bl653_dvk mesh 
         ```
 
       - To flash connect PC to USB2 port of dev kit
@@ -92,7 +96,7 @@ The goal of this tutorial is to give you a simple example that can get you start
         west flash
         ```
 
-   5. Build and flash for node 3
+   7. Build and flash for node 3
 
       For this demo will use the BL654 dev kit for node 3
 
@@ -109,8 +113,8 @@ The goal of this tutorial is to give you a simple example that can get you start
       - To build for BL654 
 
         ```
-        cd ~/zephyrproject/zephyr
-        west build -p auto -b bl654_dvk samples/bluetooth/mesh 
+        cd ~/zephyrproject/laird
+        west build -p auto -b bl654_dvk mesh 
         ```
 
       - To flash connect PC to USB2 port of dev kit
