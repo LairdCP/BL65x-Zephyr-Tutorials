@@ -158,9 +158,7 @@ To watch video tutorial, click [here](https://www.lairdconnect.com/resources/vid
      nrfjprog -e
      west flash
      ```
-   ```
-     
-     
-   ```
+
+
 
 8. Verify LED1 is flashing
