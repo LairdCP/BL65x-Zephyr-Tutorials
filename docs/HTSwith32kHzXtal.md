@@ -1,6 +1,6 @@
 # Enabling the 32kHz Crystal on the BL65x Dev Kit
 
-For designs that require the least amount of current consumption, it's recommended that you use an external +/- 20ppm 32.768kHz crystal. Laird's BL65x dev kit comes with the 32.768kHz crystal. However, the default setting is not connected (i.e. configured for the internal RC). This tutorial will show you how to connect the 32.768 kHz, and then build the Health Thermometer sample app so that it works with the external 32.768kHz crystal.
+For designs that require the least amount of current consumption, it's recommended that you use an external +/- 20ppm 32.768kHz crystal. Laird's BL65x dev kit comes with the 32.768kHz crystal. However, the default setting is not connected (i.e. configured for the internal RC). This tutorial will show you how to connect the 32.768 kHz crystal, and then build the Health Thermometer sample app so that it works with the external 32.768kHz crystal.
 
 
 
@@ -24,37 +24,31 @@ For designs that require the least amount of current consumption, it's recommend
 
      
 
-3. Modify the bl65x_dvk_defconfig file
+3. Create a .conf file to disable the internal RC.
 
-   For BL652, modify  ~/zephyrproject/zephyr/boards/arm/bl652_dvk/bl652_dvk_defconfig 
+   - With a text editor, create a .conf file in the samples/bluetooth/peripheral_ht /boards directory. If the "boards" directory does not, exist create it.
 
-   For BL653, modify  ~/zephyrproject/zephyr/boards/arm/bl653_dvk/bl653_dvk_defconfig 
+     For the BL652, create bl652_dvk.conf
 
-   For BL654, modify  ~/zephyrproject/zephyr/boards/arm/bl654_dvk/bl654_dvk_defconfig
+     For the BL653, create bl653_dvk.conf
 
-    
+     For the BL654, create bl654_dvk.conf
 
-   Unmodified 32kHz Clock Setting (i.e. set for internal RC):
+     
 
-   ```
-   # 32kHz clock source 
-   CONFIG_CLOCK_CONTROL_NRF_K32SRC_RC=y 
-   CONFIG_CLOCK_CONTROL_NRF_K32SRC_500PPM=y 
-   ```
+   - Copy and paste code below onto the .conf file you created
 
-   
+     ```
+     # 32kHz clock source 
+     CONFIG_CLOCK_CONTROL_NRF_K32SRC_XTAL=y 
+     CONFIG_CLOCK_CONTROL_NRF_K32SRC_20PPM=y 
+     ```
 
-   Modified 32kHz Clock Setting (i.e. set for external 32kHz Crystal):
+     
 
-   Enable the external crystal by simply commenting out the 2 lines shown below.
+   - Save the file
 
-   ```
-   # 32kHz clock source 
-   # CONFIG_CLOCK_CONTROL_NRF_K32SRC_RC=y 
-   # CONFIG_CLOCK_CONTROL_NRF_K32SRC_500PPM=y 
-   ```
-
-   
+     
 
 4. Build the Health Thermometer App
 
