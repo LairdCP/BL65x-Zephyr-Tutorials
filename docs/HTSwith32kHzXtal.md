@@ -24,7 +24,7 @@ For designs that require the least amount of current consumption, it's recommend
 
      
 
-3. Create a .conf file to disable the internal RC.
+3. Create a .conf file to enable external 20ppm crystal
 
    - With a text editor, create a .conf file in the samples/bluetooth/peripheral_ht /boards directory. If the "boards" directory does not, exist create it.
 
