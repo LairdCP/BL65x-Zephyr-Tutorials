@@ -33,7 +33,7 @@ If you are not familiar with devicetrees, please refer to [Zephyr Devicetree](ht
      ```
      &led0_green{ 
          gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>; 
-     }
+     };
      ```
    
    - Save the file
